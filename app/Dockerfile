@@ -3,6 +3,7 @@ RUN pip3 install pyTelegramBotAPI==2.2.3
 RUN pip3 install --upgrade pyTelegramBotAPI
 WORKDIR /usr/src/app
 COPY ./main.py .
+COPY ./text.txt .
 CMD [ "python3", "main.py" ]
 
 

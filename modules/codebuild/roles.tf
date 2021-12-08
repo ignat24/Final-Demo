@@ -31,7 +31,7 @@ resource "aws_iam_role_policy_attachment" "ec2_full_access" {
 # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAM.ServiceLinkedRoles.html
 # Also add policy to read all resources - codebuild need to read instance profile
 resource "aws_iam_role_policy" "role_policy" {
-  role = aws_iam_role.role.name
+  role = aws_iam_role.codebuild_role.name
   name = "codebuild-policy-${var.app}-${var.env}"
 
   policy = <<POLICY

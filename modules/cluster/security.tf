@@ -13,6 +13,12 @@ resource "aws_security_group" "sg_alb" {
         to_port = 80
         cidr_blocks = [var.cidr_block_route]
     }
+    ingress {
+        protocol = "tcp"
+        from_port = 443
+        to_port = 443
+        cidr_blocks = [var.cidr_block_route]
+    }
 
     egress {
         protocol = "-1"

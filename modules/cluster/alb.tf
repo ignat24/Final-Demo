@@ -18,7 +18,7 @@ resource "aws_alb_target_group" "tg_alb" {
   port = var.app_port
   protocol = "HTTP"
   vpc_id = var.vpc_id
-  target_type = "ip"
+  
 
   health_check {
     healthy_threshold   = "3"

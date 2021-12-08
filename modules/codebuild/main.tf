@@ -8,7 +8,7 @@ resource "aws_codebuild_project" "codebuild" {
   depends_on = [aws_codebuild_source_credential.github_token]
   name = "codebuild-${var.app}-${var.env}-${var.aws_region}"
   build_timeout = "60"
-  service_role = aws_iam_role.role.arn
+  service_role = aws_iam_role.codebuild_role.arn
 
   artifacts {
     type = "NO_ARTIFACTS"

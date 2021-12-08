@@ -13,6 +13,7 @@ def send_welcome(message):
     if message.text == '/start':
         bot.reply_to(message, """\
     Hi there, I am TimeBot.
+Teeeeeeest
 I am here to help you don't forgot your timetable of classes!\
     """)
     else:
