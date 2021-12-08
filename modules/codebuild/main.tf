@@ -45,7 +45,22 @@ resource "aws_codebuild_project" "codebuild" {
   }
 }
 
-resource "aws_codebuild_webhook" "webhook" {
+# resource "aws_codebuild_webhook" "webhook" {
+#   project_name = aws_codebuild_project.codebuild.name
+
+#   filter_group {
+#     filter{
+#         type = "EVENT"
+#         pattern = var.git_event
+#     }
+
+#     filter {
+#         type = "HEAD_REF"
+#         pattern = "${var.pattern_branch}/${var.branch_githook}$"
+#     }
+#   }
+# }
+resource "aws_codebuild_webhook" "webhook_branch" {
   project_name = aws_codebuild_project.codebuild.name
 
   filter_group {

@@ -64,5 +64,5 @@ variable "git_event" {
 
 variable "repository_url" {
   description = "GitHub repository url"
-  default = "https://github.com/ignat24/Demo2.git"
+  default = "https://github.com/ignat24/Final-Demo.git"
 }
