@@ -31,7 +31,7 @@ phases:
     commands:
       - env
       - cd "${CODEBUILD_SRC_DIR}/app"
-      - export TAG="${CODEBUILD_WEBHOOK_PREV_COMMIT}-${ENV}"
+      - export TAG="${CODEBUILD_BUILD_NUMBER}-${ENV}"
       - make build
   
   post_build:

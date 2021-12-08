@@ -71,6 +71,17 @@ resource "aws_iam_role_policy" "role_policy" {
       "Resource": "*"
     },
     {
+            "Effect": "Allow",
+            "Action": [
+                "route53:*",
+                "route53domains:Get*",
+                "route53domains:List*"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+    {
       "Effect": "Allow",
       "Action": [
         "elasticloadbalancing:*"
