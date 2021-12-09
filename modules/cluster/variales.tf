@@ -75,6 +75,10 @@ variable "ecr_repository_url" {
   
 }
 
+variable "ecr_repository_url_page" {
+  
+}
+
 variable "image_version" {
   default = "latest"
 }

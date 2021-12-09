@@ -17,7 +17,7 @@ resource "aws_launch_configuration" "ec2_launch" {
 resource "aws_autoscaling_group" "autoscaling" {
   name = "AS-${var.app}-${var.env}"
   launch_configuration = aws_launch_configuration.ec2_launch.name
-  target_group_arns = [aws_alb_target_group.tg_alb.arn]
+  target_group_arns = [aws_alb_target_group.tg_alb_page.arn]
   vpc_zone_identifier = var.private_subnet_ids
   
   health_check_grace_period = 20
