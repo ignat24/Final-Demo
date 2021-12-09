@@ -1,12 +1,12 @@
 locals {
-    app = "weather"
+    app = "telebot"
     env = "prod"
     az_count = 3
     aws_profile = "default"
     aws_account = "873827770697"
     aws_region = "eu-west-2"
     image_version = "0.1"
-    branch_githook = "Dev"
+    branch_githook = "EC2"
     buildspec_path = "providers/prod"
 
 }

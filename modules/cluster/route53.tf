@@ -5,6 +5,7 @@ data "aws_route53_zone" "selected" {
   private_zone = false
 }
 
+# Record in Route53
 resource "aws_route53_record" "alb_record" {
     zone_id = data.aws_route53_zone.selected.id
     name = "lb.ignatdom.website"

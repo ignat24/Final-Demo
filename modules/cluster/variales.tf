@@ -62,6 +62,10 @@ variable "listener_port" {
   default = 80
 }
 
+variable "listener_port_telegram" {
+  default = 443
+}
+
 variable "cpu_fargate" {
   default = 256
 }

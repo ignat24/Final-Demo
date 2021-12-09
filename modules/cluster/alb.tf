@@ -1,7 +1,6 @@
 # alb.tf
 
-
-# Application load balancer======
+# Application load balancer
 resource "aws_alb" "alb" {
   name = "ALB-${var.env}-${var.app}"
   subnets = var.public_subnet_ids
@@ -13,7 +12,7 @@ resource "aws_alb" "alb" {
 }
 
 
-# Application load balancer target group========
+# Application load balancer target group for page
 resource "aws_alb_target_group" "tg_alb_page" {
   port = var.app_port
   protocol = "HTTP"
@@ -35,6 +34,7 @@ resource "aws_alb_target_group" "tg_alb_page" {
   }
 }
 
+# Application load balancer target group for telebot
 resource "aws_alb_target_group" "tg_alb_bot" {
   port = var.app_port
   protocol = "HTTP"
@@ -69,10 +69,12 @@ resource "aws_alb_listener" "http_listener" {
   }
 }
 
+
 resource "aws_alb_listener" "https_listener" {
   load_balancer_arn = aws_alb.alb.arn
-  port = 443
+  port = var.listener_port_telegram
   protocol = "HTTPS"
+  # Certificate I created manualy and use it here
   certificate_arn = "arn:aws:acm:eu-central-1:873827770697:certificate/e31ce023-57d2-4675-bc88-299c8b7349f3"
 
   default_action {

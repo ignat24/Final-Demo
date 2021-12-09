@@ -1,11 +1,4 @@
 # network.tf
-provider "aws" {
-  region = var.aws_region
-}
-
-terraform {
-  backend "s3" {}
-}
 
 # Main VPC==================================
 resource "aws_vpc" "main_vpc" {

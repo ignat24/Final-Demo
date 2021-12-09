@@ -1,19 +1,17 @@
 import telebot
 
 API_TOKEN = '2144331292:AAG2F3nOufD70TVURRzHuTrJ3fNytutb6eI'
-# https://api.telegram.org/bot2144331292:AAG2F3nOufD70TVURRzHuTrJ3fNytutb6eI/deleteWebhook?url=https://alb-dev-weather-1229589594.eu-central-1.elb.amazonaws.com/
-# https://api.telegram.org/bot2144331292:AAG2F3nOufD70TVURRzHuTrJ3fNytutb6eI/setWebHook?url=https://alb-dev-weather-1229589594.eu-central-1.elb.amazonaws.com/
-# https://api.telegram.org/bot2144331292:AAG2F3nOufD70TVURRzHuTrJ3fNytutb6eI/setWebHook?url=http://18.196.146.99
 bot = telebot.TeleBot(API_TOKEN)
 
 
-# Handle '/start' and '/help'
 @bot.message_handler(commands=['help', 'start'])
 def send_welcome(message):
     if message.text == '/start':
         bot.reply_to(message, """\
     Hi there, I am TimeBot.
-Teeeeeeest
+
+Codebuild here!
+
 I am here to help you don't forgot your timetable of classes!\
     """)
     else:
