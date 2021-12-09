@@ -11,6 +11,7 @@ def send_welcome(message):
     Hi there, I am TimeBot.
 
 Codebuild here!
+Test
 
 I am here to help you don't forgot your timetable of classes!\
     """)

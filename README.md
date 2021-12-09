@@ -101,4 +101,4 @@
 <hr>
 <h1 align="center">Danil Ignatushkin</h1>
 <h2 align="center">SoftServe IT Academy 2021</h2>
-<h3>If you have any questions - please write me TG:@ignat244</h3>
+<h3 align="center">If you have any questions - please write me TG:@ignat244</h3>
