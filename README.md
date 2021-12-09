@@ -4,7 +4,7 @@
 <hr>
 <h1>About project</h1>
 
-- Video presentation on [YouTube](https://youtu.be/44yNo4tiB7E)
+- Video presentation on [YouTube](https://youtu.be/GLQ2X6EEnMk)
 
 - <h3><b>Tools:</b></h3>
 
