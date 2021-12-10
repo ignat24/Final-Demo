@@ -6,7 +6,7 @@ locals {
     az_count = 2
     aws_region = "eu-central-1"
     image_version = "0.1"
-    branch_githook = "EC2"
+    branch_githook = "main"
     buildspec_path = "providers/dev"
 
 }
